@@ -3,7 +3,8 @@ import { alphabet, notAlphabetRegex } from "../common";
 
 import { Label } from "../components/Label";
 import { Button } from "../components/Button";
-import { alphabet } from "../common";
+import { Input } from "../components/Input";
+import { TextArea } from "../components/TextArea";
 
 function caesar(text, shift) {
   return [...text.toLowerCase().replace(notAlphabetRegex, "")]
@@ -28,12 +29,12 @@ export const Caesar = () => {
 
   return (
     <>
-      <div>
+      <div className="space-y-2">
         <Label htmlFor="input">Tekst do zaszyfrowania:</Label>
-        <textarea id="input" value={input} onChange={(e) => setInput(e.target.value)} />
+        <TextArea id="input" value={input} onChange={(e) => setInput(e.target.value)} />
 
         <Label htmlFor="key">Klucz:</Label>
-        <input
+        <Input
           id="key"
           type="number"
           min="1"
@@ -42,7 +43,7 @@ export const Caesar = () => {
           value={key}
           onChange={(e) => setKey(parseInt(e.target.value, 10))}
         />
-        <div>
+        <div className="space-x-2">
           <Button onClick={handleEncrypt}>Szyfruj</Button>
           <Button onClick={handleDecrypt}>Deszyfruj</Button>
         </div>
