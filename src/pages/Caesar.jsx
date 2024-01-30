@@ -19,18 +19,18 @@ export const Caesar = () => {
   const [output, setOutput] = useState("");
   const [key, setKey] = useState(1);
 
-  const handleEncrypt = (e) => {
+  const handleEncrypt = () => {
     setOutput(caesar(input, key % alphabet.length));
   };
 
-  const handleDecrypt = (e) => {
+  const handleDecrypt = () => {
     setOutput(caesar(input, (alphabet.length - (key % alphabet.length)) % alphabet.length));
   };
 
   return (
     <>
       <div className="space-y-2">
-        <Label htmlFor="input">Tekst do zaszyfrowania:</Label>
+        <Label htmlFor="input">Tekst wejściowy:</Label>
         <TextArea id="input" value={input} onChange={(e) => setInput(e.target.value)} />
 
         <Label htmlFor="key">Klucz:</Label>
