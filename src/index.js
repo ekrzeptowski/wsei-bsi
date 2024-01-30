@@ -5,6 +5,7 @@ import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import { Caesar } from "./pages/Caesar";
+import { Polybius } from "./pages/Polybius";
 
 const router = createBrowserRouter([
   {
@@ -14,6 +15,10 @@ const router = createBrowserRouter([
   {
     path: "/caesar",
     element: <Caesar />,
+  },
+  {
+    path: "/polybius",
+    element: <Polybius />,
   },
 ]);
 
