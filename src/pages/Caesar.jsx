@@ -1,10 +1,12 @@
 import { useState } from "react";
+import { alphabet, notAlphabetRegex } from "../common";
+
 import { Label } from "../components/Label";
 import { Button } from "../components/Button";
 import { alphabet } from "../common";
 
 function caesar(text, shift) {
-  return [...text]
+  return [...text.toLowerCase().replace(notAlphabetRegex, "")]
     .map((char) => {
       const index = alphabet.indexOf(char);
       return index === -1 ? char : alphabet[(index + shift) % alphabet.length];
