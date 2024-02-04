@@ -7,6 +7,7 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import { Caesar } from "./pages/Caesar";
 import { Polybius } from "./pages/Polybius";
 import { Homophonic } from "./pages/Homophonic";
+import { Vigenere } from "./pages/Vigenere";
 
 const router = createBrowserRouter([
   {
@@ -24,6 +25,10 @@ const router = createBrowserRouter([
   {
     path: "/homophonic",
     element: <Homophonic />,
+  },
+  {
+    path: "/vigenere",
+    element: <Vigenere />,
   },
 ]);
 
