@@ -6,6 +6,7 @@ import reportWebVitals from "./reportWebVitals";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import { Caesar } from "./pages/Caesar";
 import { Polybius } from "./pages/Polybius";
+import { Homophonic } from "./pages/Homophonic";
 
 const router = createBrowserRouter([
   {
@@ -19,6 +20,10 @@ const router = createBrowserRouter([
   {
     path: "/polybius",
     element: <Polybius />,
+  },
+  {
+    path: "/homophonic",
+    element: <Homophonic />,
   },
 ]);
 
