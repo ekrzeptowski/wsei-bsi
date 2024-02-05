@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/wsei-bsi/static/css/main.6a0e0d05.css",
-    "main.js": "/wsei-bsi/static/js/main.b3ba01f8.js",
+    "main.js": "/wsei-bsi/static/js/main.80ab75e7.js",
     "static/js/787.2e1ee27d.chunk.js": "/wsei-bsi/static/js/787.2e1ee27d.chunk.js",
     "index.html": "/wsei-bsi/index.html",
     "main.6a0e0d05.css.map": "/wsei-bsi/static/css/main.6a0e0d05.css.map",
-    "main.b3ba01f8.js.map": "/wsei-bsi/static/js/main.b3ba01f8.js.map",
+    "main.80ab75e7.js.map": "/wsei-bsi/static/js/main.80ab75e7.js.map",
     "787.2e1ee27d.chunk.js.map": "/wsei-bsi/static/js/787.2e1ee27d.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.6a0e0d05.css",
-    "static/js/main.b3ba01f8.js"
+    "static/js/main.80ab75e7.js"
   ]
 }
