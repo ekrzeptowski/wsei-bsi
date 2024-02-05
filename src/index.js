@@ -5,6 +5,7 @@ import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import { ciphers } from "./Ciphers";
+import { Sidebar } from "./Sidebar";
 
 const router = createBrowserRouter([
   {
@@ -13,7 +14,12 @@ const router = createBrowserRouter([
   },
   ...ciphers.map((cipher) => ({
     path: cipher.path,
-    element: cipher.element,
+    element: (
+      <div className="flex max-sm:flex-col">
+        <Sidebar />
+        <main className="px-4 py-2">{cipher.element}</main>
+      </div>
+    ),
   })),
 ]);
 
