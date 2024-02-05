@@ -4,6 +4,7 @@ import { alphabet, notAlphabetRegex } from "../common";
 import { Input } from "../components/Input";
 import { Button } from "../components/Button";
 import { Label } from "../components/Label";
+import { H1 } from "../components/Heading";
 
 function createArray(letters) {
   let array = [];
@@ -114,6 +115,7 @@ export const Polybius = () => {
 
   return (
     <>
+      <H1>Szyfr Polibiusza</H1>
       <div className="space-y-2">
         <Label htmlFor="input">Tekst wejściowy:</Label>
         <Input id="input" type="text" value={input} onChange={(e) => setInput(e.target.value)} />

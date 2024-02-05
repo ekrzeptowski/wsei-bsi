@@ -5,6 +5,7 @@ import { Label } from "../components/Label";
 import { Button } from "../components/Button";
 import { Input } from "../components/Input";
 import { TextArea } from "../components/TextArea";
+import { H1 } from "../components/Heading";
 
 function caesar(text, shift) {
   return [...text.toLowerCase().replace(notAlphabetRegex, "")]
@@ -29,6 +30,7 @@ export const Caesar = () => {
 
   return (
     <>
+      <H1>Szyfr Cezara</H1>
       <div className="space-y-2">
         <Label htmlFor="input">Tekst wejściowy:</Label>
         <TextArea id="input" value={input} onChange={(e) => setInput(e.target.value)} />
