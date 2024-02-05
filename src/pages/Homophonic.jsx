@@ -4,6 +4,7 @@ import { notAlphabetRegex } from "../common";
 import { Label } from "../components/Label";
 import { Button } from "../components/Button";
 import { TextArea } from "../components/TextArea";
+import { H1 } from "../components/Heading";
 
 /*
 Function to generate the key
@@ -90,7 +91,7 @@ export const Homophonic = () => {
 
   return (
     <>
-      <h1>Szyfr homofoniczny</h1>
+      <H1>Szyfr homofoniczny</H1>
       <div className="space-y-2">
         <Label htmlFor="input">Tekst wejściowy:</Label>
         <TextArea id="input" type="text" value={input} onChange={(e) => setInput(e.target.value)} />

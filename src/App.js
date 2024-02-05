@@ -1,10 +1,11 @@
 import { Link } from "react-router-dom";
 import { ciphers } from "./Ciphers";
+import { H1 } from "./components/Heading";
 
 function App() {
   return (
     <main className="flex min-h-screen flex-col justify-center">
-      <h1 className="mb-4 text-center text-4xl font-bold">Szyfrator</h1>
+      <H1 className="text-center">Szyfrator</H1>
       <p className="text-center text-xl">
         Wybierz jeden z poniższych szyfrów do zaszyfrowania lub odszyfrowania wiadomości.
       </p>

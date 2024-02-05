@@ -4,6 +4,7 @@ import { Button } from "../components/Button";
 import { Label } from "../components/Label";
 import { TextArea } from "../components/TextArea";
 import { Input } from "../components/Input";
+import { H1 } from "../components/Heading";
 
 export const Vigenere = () => {
   const [input, setInput] = useState("");
@@ -11,7 +12,7 @@ export const Vigenere = () => {
   const [key, setKey] = useState("");
   return (
     <>
-      <h1>Szyfr Vigenère</h1>
+      <H1>Szyfr Vigenère</H1>
       <div className="space-y-2">
         <Label htmlFor="input">Tekst wejściowy:</Label>
         <TextArea id="input" type="text" value={input} onChange={(e) => setInput(e.target.value)} />
