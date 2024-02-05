@@ -5,6 +5,7 @@ import { Input } from "../components/Input";
 import { Button } from "../components/Button";
 import { Label } from "../components/Label";
 import { H1 } from "../components/Heading";
+import { TextArea } from "../components/TextArea";
 
 function createArray(letters) {
   let array = [];
@@ -118,7 +119,7 @@ export const Polybius = () => {
       <H1>Szyfr Polibiusza</H1>
       <div className="space-y-2">
         <Label htmlFor="input">Tekst wejściowy:</Label>
-        <Input id="input" type="text" value={input} onChange={(e) => setInput(e.target.value)} />
+        <TextArea id="input" value={input} onChange={(e) => setInput(e.target.value)} />
         <Label htmlFor="key">Klucz:</Label>
         <div>
           <table>
@@ -158,7 +159,8 @@ export const Polybius = () => {
           <Button onClick={handleDecrypt}>Deszyfruj</Button>
         </div>
       </div>
-      <p>Wynik: {output}</p>
+      <p>Wynik:</p>
+      <TextArea value={output} />
     </>
   );
 };

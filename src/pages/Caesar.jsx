@@ -51,7 +51,8 @@ export const Caesar = () => {
         </div>
       </div>
 
-      <p>Wynik: {output}</p>
+      <p>Wynik:</p>
+      <TextArea value={output} />
     </>
   );
 };

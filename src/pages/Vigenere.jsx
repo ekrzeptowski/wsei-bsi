@@ -3,7 +3,6 @@ import { alphabet, notAlphabetRegex } from "../common";
 import { Button } from "../components/Button";
 import { Label } from "../components/Label";
 import { TextArea } from "../components/TextArea";
-import { Input } from "../components/Input";
 import { H1 } from "../components/Heading";
 
 export const Vigenere = () => {
@@ -17,7 +16,7 @@ export const Vigenere = () => {
         <Label htmlFor="input">Tekst wejściowy:</Label>
         <TextArea id="input" type="text" value={input} onChange={(e) => setInput(e.target.value)} />
         <Label htmlFor="key">Klucz:</Label>
-        <Input id="key" type="text" value={key} onChange={(e) => setKey(e.target.value)} />
+        <TextArea id="key" value={key} onChange={(e) => setKey(e.target.value)} />
         <div className="space-x-2">
           <Button
             onClick={() => {
