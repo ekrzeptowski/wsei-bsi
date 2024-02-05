@@ -4,32 +4,17 @@ import "./index.css";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
-import { Caesar } from "./pages/Caesar";
-import { Polybius } from "./pages/Polybius";
-import { Homophonic } from "./pages/Homophonic";
-import { Vigenere } from "./pages/Vigenere";
+import { ciphers } from "./Ciphers";
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: <App />,
   },
-  {
-    path: "/caesar",
-    element: <Caesar />,
-  },
-  {
-    path: "/polybius",
-    element: <Polybius />,
-  },
-  {
-    path: "/homophonic",
-    element: <Homophonic />,
-  },
-  {
-    path: "/vigenere",
-    element: <Vigenere />,
-  },
+  ...ciphers.map((cipher) => ({
+    path: cipher.path,
+    element: cipher.element,
+  })),
 ]);
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
