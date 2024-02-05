@@ -90,6 +90,7 @@ export const Polybius = () => {
           let column = key[row].indexOf(char);
           if (column !== -1) return `${row + 1}${column + 1}`;
         }
+        return char;
       })
       .join("");
     setOutput(newOutput);
