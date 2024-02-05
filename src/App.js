@@ -1,19 +1,25 @@
-import logo from "./logo.svg";
-import "./App.css";
+import { Link } from "react-router-dom";
+import { ciphers } from "./Ciphers";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a className="App-link" href="https://reactjs.org" target="_blank" rel="noopener noreferrer">
-          Learn React
-        </a>
-      </header>
-    </div>
+    <main className="flex min-h-screen flex-col justify-center">
+      <h1 className="mb-4 text-center text-4xl font-bold">Szyfrator</h1>
+      <p className="text-center text-xl">
+        Wybierz jeden z poniższych szyfrów do zaszyfrowania lub odszyfrowania wiadomości.
+      </p>
+      <div className="my-4 flex flex-wrap items-center justify-center space-x-2">
+        {ciphers.map((cipher) => (
+          <Link
+            key={cipher.name}
+            to={cipher.path}
+            className="mb-2 rounded-lg border border-primary-600 px-4 py-2 text-primary-600 shadow hover:bg-primary-600 hover:text-primary-50"
+          >
+            {cipher.name}
+          </Link>
+        ))}
+      </div>
+    </main>
   );
 }
 
